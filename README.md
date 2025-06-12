@@ -1,16 +1,21 @@
 ```mermaid
 classDiagram
-    Animal <|-- Arara
-    Animal <|-- Avestruz
-    Animal <|-- Baleia
-    Animal <|-- Cachorro
-    Animal <|-- Gato
-    Animal <|-- Leao
-    Animal <|-- Lobo
-    Animal <|-- Macaco
-    Animal <|-- Morcego
-    Animal <|-- Pinguim
-    Animal <|-- Ornitorrinco
+    Aereo <|-- Arara
+    Aereo <|-- Avestruz
+    Maritimo <|-- Baleia
+    Terrestre <|-- Cachorro
+    Terrestre <|-- Gato
+    Terrestre <|-- Leao
+    Terrestre <|-- Lobo
+    Terrestre <|-- Macaco
+    Aereo <|-- Morcego
+    Terrestre <|-- Pinguim
+    Terrestre <|-- Ornitorrinco
+
+    Animal <|-- Terrestre
+    Animal <|-- Aereo
+    Animal <|-- Maritimo
+
     Animal : -String nome
     Animal: +habilidade()
     Animal: +toString()

@@ -12,9 +12,9 @@ classDiagram
     Terrestre <|-- Pinguim
     Terrestre <|-- Ornitorrinco
 
-    Animal <|-- Terrestre
-    Animal <|-- Aereo
-    Animal <|-- Maritimo
+    Animal <|.. Terrestre
+    Animal <|.. Aereo
+    Animal <|.. Maritimo
 
     Animal : -String nome
     Animal: +habilidade()

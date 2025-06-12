@@ -1,5 +1,12 @@
 ```mermaid
 classDiagram
+    class Animal{
+        <<abstract>>
+        - String nome
+        + habilidade()
+        + toString()
+    }
+
     Aereo <|-- Arara
     Aereo <|-- Avestruz
     Maritimo <|-- Baleia
@@ -16,9 +23,6 @@ classDiagram
     Animal <|.. Aereo
     Animal <|.. Maritimo
 
-    Animal : -String nome
-    Animal: +habilidade()
-    Animal: +toString()
     class Arara{
         
     }
@@ -52,4 +56,13 @@ classDiagram
     class Ornitorrinco{
 
     }
+
+    class Voador{
+        <<interface>>
+        + voar();
+    }
+
+    Arara <|.. Voador
+    Avestruz <|.. Voador
+    Morcego <|.. Voador
 ```
